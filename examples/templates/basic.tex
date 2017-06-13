@@ -1,0 +1,46 @@
+\documentclass[12pt]{report}
+\usepackage{geometry}
+\usepackage{wrapfig}
+\usepackage{graphicx} % Required for including images
+\usepackage{fontspec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[usenames, dvipsnames]{color}
+
+
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\setlength{\columnseprule}{0pt}
+\frenchspacing
+\pagestyle{fancy}
+\fancyhf{}
+\usepackage{lipsum}
+\definecolor{gblue}{RGB}{77, 177, 228}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\geometry{margin=1in}
+
+\setmainfont[Path=/home/s2e/.fonts/]{Roboto-Regular.ttf}[
+  BoldFont = Roboto-Bold.ttf
+  ]
+\setlist[itemize]{leftmargin=*}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+
+\begin{multicols}{2}[\section*{\textcolor{gblue}{$title$}}]
+\rfoot{Photo [PHOTO_LICENSE]}
+
+\includegraphics[width=0.48\textwidth]{[PROFILE_PHOTO]}
+
+$body$
+
+\end{multicols}
+\rfoot{}
+\end{document}
